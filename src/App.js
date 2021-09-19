@@ -1,24 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import { Footer } from "./Componentes/Footer/Footer";
+import { Navbar } from "./Componentes/Navbar/Navbar";
+import { Posts } from "./Componentes/Posts/Posts";
+import { AddPost } from "./Pages/AddPost/AddPost";
+import { Login } from "./Pages/Login/Login";
+import { Register } from "./Pages/Register/Register";
+import { Settings } from "./Pages/Settings/Settings";
+import { SinglePost } from "./Pages/SinglePost/SinglePost";
+
 
 function App() {
+  const user = false;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar/>
+      <Switch>
+        <Route path="/single/:singlePostId">
+            <SinglePost/>
+        </Route>
+        <Route path="/addPost">
+          {user? <AddPost/>:<Login/>}
+        </Route>
+        <Route path="/settings">
+          <Settings/>
+        </Route>
+        <Route path="/login">
+          {user? <Posts/>:<Login/>}
+        </Route>
+        <Route path="/register">
+          {user? <Posts/>:<Register/>}
+        </Route>
+        <Route expect path="/">
+          <Posts/>
+        </Route>
+      </Switch>
+      <Footer/>
+    </Router>
   );
 }
 

@@ -1,0 +1,60 @@
+.addPost{
+    padding-top: 50px;
+}
+.addPostForm{
+    position: relative;
+}
+.addPostFormGroup{
+    margin-left: 150px;
+    display: flex;
+    align-items: center;
+    width:100%;
+}
+#addPostIcon{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: rgb(158, 153, 153);
+
+}
+.addPostInput{
+    font-size: 30px;
+    border: none;
+    padding: 20px;
+    width:70vw;
+}
+.addPostInput:focus{
+    outline: none;
+}
+.addPostText{
+    font-size: 20px;
+}
+#addPostTextArea{
+    width: 80%;
+}
+.addPostSubmit{
+    position: absolute;
+    top: 20;
+    right:100px;
+    color: white;
+    background-color:teal;
+    padding: 10px;
+    border: none;
+    border-radius:10px;
+    cursor: pointer;
+    font-size: 18;
+}
+
+.addPostImg{
+    width: 80%;
+    margin-left: 150px;
+    margin-right: 150px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}

@@ -1,0 +1,79 @@
+.settings{
+    width:80%;
+    margin: auto;
+    font-family: "Poppins";
+ }
+ .settingsWrapper{
+     flex: 9;
+ }
+ .settingTitle{
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+ }
+ .settingUpdateTitle{
+     font-size: 30px;
+     margin: 20px 0px;
+ }
+ .settingDeleteTitle{
+     color: red;
+     cursor: pointer;
+     font-size: 18px;
+ }
+ .settingForm{
+     display: flex;
+     flex-direction: column;
+ }
+ .settingProfilePicture{
+     display: flex;
+     align-items: center;
+     margin: 15px 0px;
+ }
+ .settingProfilePicture > img{
+     width: 70px;
+     height: 70px;
+     border-radius: 50%;
+     object-fit: cover;
+ }
+ .settingProfilePictureIcon{
+     width: 25px;
+     height: 25px;
+     border-radius: 50%;
+     background-color: black;
+     color: white;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-left: 15px;
+     cursor: pointer;
+ }
+ .settingForm > label{
+     font-size: 20px;
+     margin-top: 20px;
+ 
+ }
+ .settingForm > input{
+     color: gray;
+     margin: 10px 0px;
+     height: 30px;
+     border: none;
+     border-bottom: 1px solid lightgray;
+     padding: 10px 0px;
+     font-size:16px;
+ 
+ }
+ .settingForm > input:focus{
+     border: none;
+ }
+ .settingSubmit{
+     width: 170px;
+     align-self: center;
+     cursor: pointer;
+     border:none;
+     border-radius: 10px;
+     padding: 10px;
+     color: white;
+     background: teal;
+     margin: 20px 0px;
+     font-size: 16px;
+ }
